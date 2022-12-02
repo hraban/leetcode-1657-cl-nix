@@ -5,7 +5,13 @@ Solution to LC 1657 as a litmus test for my Nix + Common Lisp build system: [[ht
 Usage:
 
 #+begin_src shell
-nix run . -- abcceeee bbaaaaec
+nix run github:hraban/leetcode-1657-cl-nix -- abcceeee bbaaaaec
 #+end_src
 
 Or any two strings.
+
+You don’t need to clone this repository first; Nix will automatically download it for you. If you do want to clone it and work on a local copy, run it this way:
+
+#+begin_src shell
+nix run . -- abc abc
+#+end_src
