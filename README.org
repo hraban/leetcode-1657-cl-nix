@@ -1,0 +1,11 @@
+* Leetcode 1657
+
+Solution to LC 1657 as a litmus test for my Nix + Common Lisp build system: [[https://github.com/hraban/nixpkgs/tree/feat/lisp-packages-lite/pkgs/development/lisp-modules-lite][=lispPackagesLite=]].
+
+Usage:
+
+#+begin_src shell
+nix run . -- abcceeee bbaaaaec
+#+end_src
+
+Or any two strings.
