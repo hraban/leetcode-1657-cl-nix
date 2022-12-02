@@ -20,19 +20,13 @@
 
 (in-package #:leetcode-1657/main)
 
-(defun counts (b)
-  "Get a multi-set containing only the /counts/ of bag B."
-  (->> b
-       (convert 'fset:map)
-       (convert 'list)
-       (mapcar #'cdr)
-       (convert 'bag)))
-
 (defun normalize (w)
-  (let* ((b (convert 'bag w))
-         (s (convert 'fset:set b))
-         (c (counts b)))
-    (cons s c)))
+  (cons (->> w (convert 'fset:set))
+        (->> w (convert 'bag)
+               (convert 'fset:map)
+               (convert 'list)
+               (mapcar #'cdr)
+               (convert 'bag))))
 
 (defun main-aux (word1 word2)
   (let ((res (fset:equal? (normalize word1)
