@@ -25,10 +25,6 @@
               buildInputs = [ pkgs.sbcl ];
               lispDependencies = [ arrow-macros inferior-shell asdf str fset ];
               src = cleanSource ./.;
-              installPhase = ''
-                mkdir -p "$out/bin"
-                cp dist/leetcode-1657 "$out/bin/"
-              '';
               meta = {
                 license = "AGPLv3";
               };
