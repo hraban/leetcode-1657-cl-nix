@@ -20,6 +20,6 @@
   :author "Hraban Luyat"
   :licence "AGPLv3"
   :build-operation "program-op"
-  :build-pathname "bin/leetcode-1657"
+  :build-pathname "bin/leetcode"
   :entry-point "leetcode-1657:main"
   :depends-on ("leetcode-1657/main"))

@@ -21,6 +21,9 @@
         {
           packages = {
             default = lispDerivation {
+              # Trailing numbers in flake names are interpreted as version
+              # numbers and stripped from the expected binary name.
+              name = "leetcode";
               lispSystem = "leetcode-1657";
               buildInputs = [ pkgs.sbcl ];
               lispDependencies = [ arrow-macros inferior-shell asdf str fset ];
