@@ -13,7 +13,7 @@
   }:
     flake-utils.lib.eachDefaultSystem (system:
       let
-        pkgs = import nixpkgs { inherit system; };
+        pkgs = nixpkgs.legacyPackages.${system};
         cleanSource = src: gitignore.lib.gitignoreSource (pkgs.lib.cleanSource src);
         inherit (pkgs.callPackage hly-nixpkgs {}) lispPackagesLite;
       in
