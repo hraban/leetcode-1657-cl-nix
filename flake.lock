@@ -1,12 +1,28 @@
 {
   "nodes": {
+    "cl-nix-lite": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1678950438,
+        "narHash": "sha256-83T0hqi6jHlc2Jq1t1dLu0vAPnIrwnoyOofaNQvOOd0=",
+        "owner": "hraban",
+        "repo": "cl-nix-lite",
+        "rev": "432ad69f2bf1b5d843e981b020922af54f1eb28c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hraban",
+        "repo": "cl-nix-lite",
+        "type": "github"
+      }
+    },
     "flake-utils": {
       "locked": {
-        "lastModified": 1667395993,
-        "narHash": "sha256-nuEHfE/LcWyuSWnS8t12N1wc105Qtau+/OdUAjtQ0rA=",
+        "lastModified": 1678901627,
+        "narHash": "sha256-U02riOqrKKzwjsxc/400XnElV+UtPUQWpANPlyazjH0=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "5aed5285a952e0b949eb3ba02c12fa4fcfef535f",
+        "rev": "93a2b84fc4b70d9e089d029deacc3583435c2ed6",
         "type": "github"
       },
       "original": {
@@ -35,29 +51,13 @@
         "type": "github"
       }
     },
-    "hly-nixpkgs": {
-      "locked": {
-        "lastModified": 1674180424,
-        "narHash": "sha256-H0k8oP5x3E31nd/zusN6/ariLdCG3sA9/vDMT8tXUdM=",
-        "owner": "hraban",
-        "repo": "nixpkgs",
-        "rev": "a37eff552354c343506946f382ee0332813b2764",
-        "type": "github"
-      },
-      "original": {
-        "owner": "hraban",
-        "ref": "feat/lisp-packages-lite",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1673947312,
-        "narHash": "sha256-xx/2nRwRy3bXrtry6TtydKpJpqHahjuDB5sFkQ/XNDE=",
+        "lastModified": 1680303149,
+        "narHash": "sha256-JQO/mAWguuN0VPRxDrYDw6LtyVpFgf3w6TR5MraF9kg=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "2d38b664b4400335086a713a0036aafaa002c003",
+        "rev": "242246ee1e58f54d2322227fc5eef53b4a616a31",
         "type": "github"
       },
       "original": {
@@ -67,9 +67,9 @@
     },
     "root": {
       "inputs": {
+        "cl-nix-lite": "cl-nix-lite",
         "flake-utils": "flake-utils",
         "gitignore": "gitignore",
-        "hly-nixpkgs": "hly-nixpkgs",
         "nixpkgs": "nixpkgs"
       }
     }

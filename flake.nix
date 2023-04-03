@@ -6,16 +6,19 @@
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:hercules-ci/gitignore.nix";
     };
-    hly-nixpkgs.url = "github:hraban/nixpkgs/feat/lisp-packages-lite";
+    cl-nix-lite = {
+      flake = false;
+      url = "github:hraban/cl-nix-lite";
+    };
   };
   outputs = {
-    self, nixpkgs, hly-nixpkgs, gitignore, flake-utils
+    self, nixpkgs, cl-nix-lite, gitignore, flake-utils
   }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
         cleanSource = src: gitignore.lib.gitignoreSource (pkgs.lib.cleanSource src);
-        inherit (pkgs.callPackage hly-nixpkgs {}) lispPackagesLite;
+        lispPackagesLite = import cl-nix-lite { inherit pkgs; };
       in
       with lispPackagesLite;
         {
