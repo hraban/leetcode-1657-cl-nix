@@ -29,10 +29,11 @@
               name = "leetcode";
               lispSystem = "leetcode-1657";
               buildInputs = [ pkgs.sbcl ];
-              lispDependencies = [ arrow-macros inferior-shell asdf str fset ];
+              lispDependencies = [ arrow-macros inferior-shell str fset ];
               src = cleanSource ./.;
+              dontStrip = true;
               meta = {
-                license = "AGPLv3";
+                license = pkgs.lib.licenses.agpl3Only;
               };
             };
           };
