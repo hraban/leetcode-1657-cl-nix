@@ -2,25 +2,16 @@
   description = "leetcode-1657";
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
-    gitignore = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:hercules-ci/gitignore.nix";
-    };
-    cl-nix-lite = {
-      flake = false;
-      url = "github:hraban/cl-nix-lite";
-    };
+    cl-nix-lite.url = "github:hraban/cl-nix-lite";
   };
   outputs = {
-    self, nixpkgs, cl-nix-lite, gitignore, flake-utils
+    self, nixpkgs, cl-nix-lite, flake-utils
   }:
     flake-utils.lib.eachDefaultSystem (system:
       let
-        pkgs = nixpkgs.legacyPackages.${system};
-        cleanSource = src: gitignore.lib.gitignoreSource (pkgs.lib.cleanSource src);
-        lispPackagesLite = import cl-nix-lite { inherit pkgs; };
+        pkgs = nixpkgs.legacyPackages.${system}.extend cl-nix-lite.overlays.default;
       in
-      with lispPackagesLite;
+      with pkgs.lispPackagesLite;
         {
           packages = {
             default = lispDerivation {
@@ -28,9 +19,8 @@
               # numbers and stripped from the expected binary name.
               name = "leetcode";
               lispSystem = "leetcode-1657";
-              buildInputs = [ pkgs.sbcl ];
               lispDependencies = [ arrow-macros inferior-shell str fset ];
-              src = cleanSource ./.;
+              src = pkgs.lib.cleanSource ./.;
               dontStrip = true;
               meta = {
                 license = pkgs.lib.licenses.agpl3Only;

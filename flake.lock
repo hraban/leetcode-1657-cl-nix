@@ -1,13 +1,12 @@
 {
   "nodes": {
     "cl-nix-lite": {
-      "flake": false,
       "locked": {
-        "lastModified": 1682102428,
-        "narHash": "sha256-11/0ZTvxrI5PEhzOKUbZj0IAdiMiLpGGSs576LwFZ6w=",
+        "lastModified": 1699028934,
+        "narHash": "sha256-ISS78eMmKHpKqV5FlulK+XisNzKa9CGUMXIGQaYqZnY=",
         "owner": "hraban",
         "repo": "cl-nix-lite",
-        "rev": "40b368ed386ff3e7739985f6633e0625f8534f2c",
+        "rev": "7850aef6947b80bdf3fbb3b79dad729f937ec869",
         "type": "github"
       },
       "original": {
@@ -21,46 +20,26 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1681202837,
-        "narHash": "sha256-H+Rh19JDwRtpVPAWp64F+rlEtxUWBAQW28eAi3SRSzg=",
+        "lastModified": 1694529238,
+        "narHash": "sha256-zsNZZGTGnMOf9YpHKJqMSsa0dXbfmxeoJ7xHlrt+xmY=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "cfacdce06f30d2b68473a46042957675eebb3401",
+        "rev": "ff7b65b44d01cf9ba6a71320833626af21126384",
         "type": "github"
       },
       "original": {
         "owner": "numtide",
         "repo": "flake-utils",
-        "type": "github"
-      }
-    },
-    "gitignore": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1660459072,
-        "narHash": "sha256-8DFJjXG8zqoONA1vXtgeKXy68KdJL5UaXR8NtVMUbx8=",
-        "owner": "hercules-ci",
-        "repo": "gitignore.nix",
-        "rev": "a20de23b925fd8264fd7fad6454652e142fd7f73",
-        "type": "github"
-      },
-      "original": {
-        "owner": "hercules-ci",
-        "repo": "gitignore.nix",
         "type": "github"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1682018913,
-        "narHash": "sha256-Eo2ZkWB8+qy8fnmxtJUNJl6HHYYAgXDR29+OwDIzm1Q=",
+        "lastModified": 1699094435,
+        "narHash": "sha256-YLZ5/KKZ1PyLrm2MO8UxRe4H3M0/oaYqNhSlq6FDeeA=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "7048a48bc79b4361f77740420000d2b5454b0df7",
+        "rev": "9d5d25bbfe8c0297ebe85324addcb5020ed1a454",
         "type": "github"
       },
       "original": {
@@ -72,7 +51,6 @@
       "inputs": {
         "cl-nix-lite": "cl-nix-lite",
         "flake-utils": "flake-utils",
-        "gitignore": "gitignore",
         "nixpkgs": "nixpkgs"
       }
     },
