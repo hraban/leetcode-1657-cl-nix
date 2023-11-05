@@ -1,6 +1,6 @@
 * Leetcode 1657
 
-Solution to LC 1657 as a litmus test for my Nix + Common Lisp build system: [[https://github.com/hraban/nixpkgs/tree/feat/lisp-packages-lite/pkgs/development/lisp-modules-lite][=lispPackagesLite=]].
+Solution to LC 1657 as a litmus test for my Nix + Common Lisp build system: [[https://github.com/hraban/cl-nix-lite][=cl-nix-lite=]].
 
 Usage:
 
